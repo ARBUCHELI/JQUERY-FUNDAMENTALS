@@ -640,9 +640,52 @@ $(document).ready(() => {
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* jQuery Objects
+----------------
+Now that you’ve seen some jQuery in action, let’s dive a bit deeper into syntax. You’ve probably noticed the $ symbol before anything we target. The $ symbol is an alias for the jQuery 
+function. The $ symbol and jQuery are interchangeable.
+
+The jQuery function takes a parameter that targets an element, like '#navMenu', and turns it into a jQuery object. Then, you can call any jQuery method on a jQuery object.
+
+Developers often save jQuery objects in variables, like so:
+
+const $jQueryObject = $('.someClass');
+
+Notice our variable name, $jQueryObject, starts with the ($) character. It is best practice to name jQuery object variables with a leading $. It is a naming convention that reminds you 
+and lets others know that a given variable is a jQuery object.
+
+With this in mind, let’s improve our code from the previous Exercise.
+
+* Instructions
+--------------
+Checkpoint 1 Passed
+1.
+In the .ready() callback function in main.js, delete $('#nav-dropdown').hide();.
+
+Checkpoint 2 Passed
+2.
+In the same place, create a variable called $navDropdown and store the '#nav-dropdown' jQuery object inside it.
 
 
+Hint
+This is the basic syntax for storing a jQuery object in a variable:
 
+let $name = $('#id');
+
+In this exercise, the variable name is $navDropdown and the id of the HTML element is nav-dropdown.
+
+Checkpoint 3 Passed
+3.
+Finally, call .hide() on $navDropdown.
+
+
+main.js
+-------
+$(document).ready(() => {
+  const $navDropdown = $('#nav-dropdown').hide();
+});
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
